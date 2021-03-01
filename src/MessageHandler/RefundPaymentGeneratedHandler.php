@@ -6,7 +6,6 @@ namespace PayPlug\SyliusPayPlugPlugin\MessageHandler;
 
 use DateTime;
 use DateTimeInterface;
-use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
 use PayPlug\SyliusPayPlugPlugin\Entity\RefundHistory;
 use PayPlug\SyliusPayPlugPlugin\Exception\ApiRefundException;
@@ -33,7 +32,7 @@ use Webmozart\Assert\Assert;
 
 final class RefundPaymentGeneratedHandler
 {
-    /** @var ObjectManager */
+    /** @var EntityManagerInterface */
     private $entityManager;
 
     /** @var FactoryInterface */
